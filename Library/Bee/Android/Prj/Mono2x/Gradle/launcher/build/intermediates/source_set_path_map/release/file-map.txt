@@ -1,0 +1,9 @@
+com.DefaultCompany.Dr.Auge.launcher-pngs-0 D:\Unity Project\freelance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\build\generated\res\pngs\release
+com.DefaultCompany.Dr.Auge.launcher-resValues-1 D:\Unity Project\freelance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\build\generated\res\resValues\release
+com.DefaultCompany.Dr.Auge.launcher-rs-2 D:\Unity Project\freelance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\build\generated\res\rs\release
+com.DefaultCompany.Dr.Auge.launcher-mergeReleaseResources-3 D:\Unity Project\freelance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.DefaultCompany.Dr.Auge.launcher-mergeReleaseResources-4 D:\Unity Project\freelance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.DefaultCompany.Dr.Auge.launcher-merged_res-5 D:\Unity Project\freelance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\build\intermediates\merged_res\release
+com.DefaultCompany.Dr.Auge.launcher-main-6 D:\Unity Project\freelance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\res
+com.DefaultCompany.Dr.Auge.launcher-release-7 D:\Unity Project\freelance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\release\res
+com.DefaultCompany.Dr.Auge.launcher-packaged_res-8 D:\Unity Project\freelance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\packaged_res\release

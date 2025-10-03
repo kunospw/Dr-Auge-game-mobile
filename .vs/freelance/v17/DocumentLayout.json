@@ -1,0 +1,325 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Unity Project\\freelance\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\crowdmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crowdmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|d:\\unity project\\freelance\\assets\\scripts\\gate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\damagemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\damagemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\crowdmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crowdmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\mutanthorde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mutanthorde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\playercounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\fallzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fallzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\followzaxis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\followzaxis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\gatepairmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gatepairmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\speedpad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\speedpad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\launchpad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\launchpad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\rotateobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rotateobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Project\\freelance\\Temp\\Compiled-Standard.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Temp\\Compiled-Standard.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AudioManager.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AudioManager.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAABRwGYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T05:55:16.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FinishLine.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\FinishLine.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FinishLine.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\FinishLine.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FinishLine.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T12:44:21.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UIManager.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UIManager.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAgwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T09:07:26.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MutantHorde.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\MutantHorde.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MutantHorde.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\MutantHorde.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MutantHorde.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAwHYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T09:09:28.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CrowdMember.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\CrowdMember.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CrowdMember.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\CrowdMember.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CrowdMember.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAvwEUAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T06:58:15.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FallZone.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\FallZone.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FallZone.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\FallZone.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FallZone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T09:12:58.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FollowZAxis.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\FollowZAxis.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FollowZAxis.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\FollowZAxis.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FollowZAxis.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T08:06:43.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LevelGenerator.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\LevelGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelGenerator.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\LevelGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LevelGenerator.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAwwFIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T04:45:28.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CrowdManager.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\CrowdManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CrowdManager.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\CrowdManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CrowdManager.cs",
+              "ViewState": "AgIAAIABAAAAAAAAAAAswKMBAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T11:33:50.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GatePairManager.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\GatePairManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GatePairManager.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\GatePairManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GatePairManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T10:20:41.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DamageMode.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\DamageMode.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DamageMode.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\DamageMode.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DamageMode.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAvwCMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T09:45:02.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Gate.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\Gate.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gate.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\Gate.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gate.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAtwDoAAACCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T09:43:59.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerCounter.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\PlayerCounter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerCounter.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\PlayerCounter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerCounter.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T09:41:12.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Chunk.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\Chunk.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Chunk.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\Chunk.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Chunk.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T09:12:32.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SpeedPad.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\SpeedPad.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SpeedPad.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\SpeedPad.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SpeedPad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T09:19:07.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Launchpad.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\Launchpad.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Launchpad.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\Launchpad.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Launchpad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T08:55:57.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RotateObject.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\RotateObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\RotateObject.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\RotateObject.cs",
+              "RelativeToolTip": "Assets\\Scripts\\RotateObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T08:06:24.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
+              "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAgwHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T07:20:56.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Compiled-Standard.shader",
+              "DocumentMoniker": "D:\\Unity Project\\freelance\\Temp\\Compiled-Standard.shader",
+              "RelativeDocumentMoniker": "Temp\\Compiled-Standard.shader",
+              "ToolTip": "D:\\Unity Project\\freelance\\Temp\\Compiled-Standard.shader",
+              "RelativeToolTip": "Temp\\Compiled-Standard.shader",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-09-12T08:02:26.618Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
