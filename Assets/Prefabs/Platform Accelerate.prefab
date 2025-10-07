@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8005446662102325761}
   - component: {fileID: 861646938971402944}
   - component: {fileID: 7872232411257267036}
-  - component: {fileID: 2936544302096958272}
+  - component: {fileID: 8760872823778906967}
   m_Layer: 0
   m_Name: Walls (39)
   m_TagString: Wall
@@ -107,7 +107,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.41, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2936544302096958272
+--- !u!114 &8760872823778906967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,12 +116,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 401807339806272649}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &468023089769854830
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +131,7 @@ GameObject:
   - component: {fileID: 5923038016998227391}
   - component: {fileID: 1322566909827855482}
   - component: {fileID: 4572096516309857605}
-  - component: {fileID: 4231137344857343089}
+  - component: {fileID: 1258410126119497206}
   m_Layer: 0
   m_Name: Walls (31)
   m_TagString: Wall
@@ -229,7 +227,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.41, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4231137344857343089
+--- !u!114 &1258410126119497206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,12 +236,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 468023089769854830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &545929227901956550
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +251,7 @@ GameObject:
   - component: {fileID: 100590944775219475}
   - component: {fileID: 8198633383440297248}
   - component: {fileID: 8583254805035387340}
-  - component: {fileID: 2317745803547069748}
+  - component: {fileID: 8190644436653474668}
   m_Layer: 0
   m_Name: Walls (29)
   m_TagString: Wall
@@ -351,7 +347,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.41, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: -0.0000019073486}
---- !u!114 &2317745803547069748
+--- !u!114 &8190644436653474668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,12 +356,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 545929227901956550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &1238348166261220216
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +442,7 @@ GameObject:
   - component: {fileID: 2432899117341129454}
   - component: {fileID: 5171607971530116726}
   - component: {fileID: 3999493464586808948}
-  - component: {fileID: 5594757721060284940}
+  - component: {fileID: 639823080778737457}
   m_Layer: 0
   m_Name: Walls (30)
   m_TagString: Wall
@@ -544,7 +538,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.41, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5594757721060284940
+--- !u!114 &639823080778737457
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -553,12 +547,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488305621989199781}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &1722227225984419562
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +562,7 @@ GameObject:
   - component: {fileID: 3874211729548408222}
   - component: {fileID: 505528265659056347}
   - component: {fileID: 4951806541370407723}
-  - component: {fileID: 1111349616691513336}
+  - component: {fileID: 2561352842260640250}
   m_Layer: 0
   m_Name: Walls (23)
   m_TagString: Wall
@@ -666,7 +658,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.42, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: -0.0000038146973}
---- !u!114 &1111349616691513336
+--- !u!114 &2561352842260640250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -675,12 +667,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1722227225984419562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &1796600527402830961
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,7 +682,7 @@ GameObject:
   - component: {fileID: 2254805367176806418}
   - component: {fileID: 1928318801442379542}
   - component: {fileID: 631185036980240372}
-  - component: {fileID: 4385247303820514683}
+  - component: {fileID: 1080068607814045399}
   m_Layer: 0
   m_Name: Walls (27)
   m_TagString: Wall
@@ -788,7 +778,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.41, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4385247303820514683
+--- !u!114 &1080068607814045399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -797,12 +787,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1796600527402830961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &2869378896100092007
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +802,7 @@ GameObject:
   - component: {fileID: 256095006412630882}
   - component: {fileID: 1890305776905599846}
   - component: {fileID: 197372304459737597}
-  - component: {fileID: 992237679797187879}
+  - component: {fileID: 2677326641931365855}
   m_Layer: 0
   m_Name: Walls (32)
   m_TagString: Wall
@@ -910,7 +898,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.41, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &992237679797187879
+--- !u!114 &2677326641931365855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -919,12 +907,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2869378896100092007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &3273424344235044577
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,7 +922,7 @@ GameObject:
   - component: {fileID: 7230566525039787259}
   - component: {fileID: 4625130409373758616}
   - component: {fileID: 1250398950548475682}
-  - component: {fileID: 7739191873206733332}
+  - component: {fileID: 3804984227578582865}
   m_Layer: 0
   m_Name: Walls (22)
   m_TagString: Wall
@@ -1032,7 +1018,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.41, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7739191873206733332
+--- !u!114 &3804984227578582865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1041,12 +1027,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3273424344235044577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &4447788129116441660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,7 +1042,7 @@ GameObject:
   - component: {fileID: 8124460517460921784}
   - component: {fileID: 7927898359623410397}
   - component: {fileID: 7746039866922892013}
-  - component: {fileID: 4168197983346631575}
+  - component: {fileID: 6830818700405847400}
   m_Layer: 0
   m_Name: Walls (41)
   m_TagString: Wall
@@ -1154,7 +1138,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.42, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4168197983346631575
+--- !u!114 &6830818700405847400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1163,12 +1147,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4447788129116441660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &4481244022287246230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,7 +1162,7 @@ GameObject:
   - component: {fileID: 6819298365709144317}
   - component: {fileID: 8928780315360931867}
   - component: {fileID: 793382183598080814}
-  - component: {fileID: 9130043248427597176}
+  - component: {fileID: 578056613766409584}
   m_Layer: 0
   m_Name: Walls (26)
   m_TagString: Wall
@@ -1276,7 +1258,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.41, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9130043248427597176
+--- !u!114 &578056613766409584
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1285,12 +1267,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4481244022287246230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &4553992194467895337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,7 +1282,7 @@ GameObject:
   - component: {fileID: 4409179746313795899}
   - component: {fileID: 8523996799877183325}
   - component: {fileID: 4993166811100651223}
-  - component: {fileID: 8880352377072087970}
+  - component: {fileID: 1368067982069199297}
   m_Layer: 0
   m_Name: Walls (34)
   m_TagString: Wall
@@ -1398,7 +1378,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.41, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8880352377072087970
+--- !u!114 &1368067982069199297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1407,12 +1387,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4553992194467895337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &4608645964349060819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,7 +1469,7 @@ GameObject:
   - component: {fileID: 6951466832921582588}
   - component: {fileID: 6988990697379526312}
   - component: {fileID: 8526422993819469216}
-  - component: {fileID: 1897716359838356721}
+  - component: {fileID: 1230219957133061311}
   m_Layer: 0
   m_Name: Walls (40)
   m_TagString: Wall
@@ -1587,7 +1565,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.42, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: -0.0000038146973}
---- !u!114 &1897716359838356721
+--- !u!114 &1230219957133061311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1596,12 +1574,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4644771297238561535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &4696413877069915447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,7 +1589,7 @@ GameObject:
   - component: {fileID: 7462632149334940260}
   - component: {fileID: 548512776904205999}
   - component: {fileID: 6457078998897120335}
-  - component: {fileID: 2700132552524873159}
+  - component: {fileID: 1009674962720709825}
   m_Layer: 0
   m_Name: Walls (38)
   m_TagString: Wall
@@ -1709,7 +1685,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.42, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0.0000038146973}
---- !u!114 &2700132552524873159
+--- !u!114 &1009674962720709825
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1718,12 +1694,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4696413877069915447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &5349355293040311387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,7 +1709,7 @@ GameObject:
   - component: {fileID: 3932012851174865266}
   - component: {fileID: 5858429082119080803}
   - component: {fileID: 6060376496612822325}
-  - component: {fileID: 765817793863060456}
+  - component: {fileID: 4073014760061896321}
   m_Layer: 0
   m_Name: Walls (37)
   m_TagString: Wall
@@ -1831,7 +1805,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.42, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &765817793863060456
+--- !u!114 &4073014760061896321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1840,12 +1814,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5349355293040311387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &5352429506431627521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,7 +1829,7 @@ GameObject:
   - component: {fileID: 6998266053444809625}
   - component: {fileID: 6359731010595637912}
   - component: {fileID: 8020598129352933435}
-  - component: {fileID: 474165479364444176}
+  - component: {fileID: 8233138385280326542}
   m_Layer: 0
   m_Name: Walls (25)
   m_TagString: Wall
@@ -1953,7 +1925,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.41, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &474165479364444176
+--- !u!114 &8233138385280326542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1962,12 +1934,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5352429506431627521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &5393441221492803262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,7 +1980,7 @@ GameObject:
   - component: {fileID: 8475763212966951138}
   - component: {fileID: 6667191037863868125}
   - component: {fileID: 776917803179831201}
-  - component: {fileID: 6914365210300770821}
+  - component: {fileID: 8608919812190740785}
   m_Layer: 0
   m_Name: Walls (33)
   m_TagString: Wall
@@ -2106,7 +2076,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.41, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6914365210300770821
+--- !u!114 &8608919812190740785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2115,12 +2085,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5772265055430866918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &5825075332099576359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,7 +2100,7 @@ GameObject:
   - component: {fileID: 9209492155277371048}
   - component: {fileID: 6603488493274513973}
   - component: {fileID: 375522005706284893}
-  - component: {fileID: 5084362042477996537}
+  - component: {fileID: 2831902821261711547}
   m_Layer: 0
   m_Name: Walls (24)
   m_TagString: Wall
@@ -2228,7 +2196,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.42, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5084362042477996537
+--- !u!114 &2831902821261711547
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2237,12 +2205,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5825075332099576359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &5934578659182073864
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,7 +2220,7 @@ GameObject:
   - component: {fileID: 2612550511711824659}
   - component: {fileID: 3769718303358672200}
   - component: {fileID: 3763362910310731617}
-  - component: {fileID: 3041191591247066914}
+  - component: {fileID: 7791240416225809788}
   m_Layer: 0
   m_Name: Walls (35)
   m_TagString: Wall
@@ -2350,7 +2316,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.42, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3041191591247066914
+--- !u!114 &7791240416225809788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2359,12 +2325,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5934578659182073864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &6860468921167114596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2376,7 +2340,7 @@ GameObject:
   - component: {fileID: 2265953022424078335}
   - component: {fileID: 5102136291575855744}
   - component: {fileID: 3094498818489645032}
-  - component: {fileID: 4307821862588526993}
+  - component: {fileID: 618849175388630817}
   m_Layer: 0
   m_Name: Walls (36)
   m_TagString: Wall
@@ -2472,7 +2436,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.42, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4307821862588526993
+--- !u!114 &618849175388630817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2481,12 +2445,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6860468921167114596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1 &8223105377821308319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,7 +2491,7 @@ GameObject:
   - component: {fileID: 4137788172417353463}
   - component: {fileID: 1567858900079135562}
   - component: {fileID: 8242852922218493918}
-  - component: {fileID: 716100785257624741}
+  - component: {fileID: 14944287541484955}
   m_Layer: 0
   m_Name: Walls (28)
   m_TagString: Wall
@@ -2625,7 +2587,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.41, y: 3.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0.0000019073486}
---- !u!114 &716100785257624741
+--- !u!114 &14944287541484955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2634,12 +2596,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9170114743925449324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 83479028b05212c408795e853210da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
+  hitsRequired: 5
 --- !u!1001 &5938865713333760727
 PrefabInstance:
   m_ObjectHideFlags: 0

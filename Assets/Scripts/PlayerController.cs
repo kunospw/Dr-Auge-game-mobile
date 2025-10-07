@@ -50,49 +50,50 @@ public class PlayerController : MonoBehaviour
         Debug.Log("PlayerController: Reset IsWinning flag to false in Awake()");
     }
 
-    void Update()
+    // freelance - Chunks Generation - Android - Unity 2022.3.56f1 _DX11_ 2025-10-06 11-56-19.mp4/Scripts/PlayerController.cs
+
+void Update()
+{
+    if (!alive || finishLineReached) return;
+
+    HandleInput();
+
+    // ===== speed smoothing =====
+    if (boostTimer > 0f)
     {
-        if (!alive || finishLineReached) return;
-
-        HandleInput();
-
-        // ===== speed smoothing =====
-        if (boostTimer > 0f)
-        {
-            boostTimer -= Time.deltaTime;
-            if (boostTimer <= 0f) targetSpeed = baseForwardSpeed; // habis, balik normal
-        }
-        float rate = (currentSpeed < targetSpeed) ? accelRate : decelRate;
-        currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, rate * Time.deltaTime);
-
-        // ===== lane steer =====
-        float targetX;
-        
-        if (isDragging)
-        {
-            // Use continuous drag position while touching
-            targetX = targetLanePosition;
-        }
-        else
-        {
-            // Use discrete lane position when not dragging
-            targetX = currentLane * laneOffset;
-        }
-        
-        Vector3 move = Vector3.zero;
-        float lerpSpeed = isDragging ? laneLerpSpeed * 1.5f : laneLerpSpeed; // Faster response during drag
-        move.x = (targetX - transform.position.x) * lerpSpeed;
-
-        // forward auto-run
-        move.z = currentSpeed;
-
-        // gravity
-        if (cc.isGrounded && verticalVelocity < 0f) verticalVelocity = -2f;
-        else verticalVelocity -= gravity * Time.deltaTime;
-        move.y = verticalVelocity;
-
-        cc.Move(move * Time.deltaTime);
+        boostTimer -= Time.deltaTime;
+        if (boostTimer <= 0f) targetSpeed = baseForwardSpeed; // habis, balik normal
     }
+    float rate = (currentSpeed < targetSpeed) ? accelRate : decelRate;
+    currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, rate * Time.deltaTime);
+
+    // ===== lane steer =====
+    float targetX;
+    
+    if (isDragging)
+    {
+        targetX = targetLanePosition;
+    }
+    else
+    {
+        targetX = currentLane * laneOffset;
+    }
+    
+    Vector3 move = Vector3.zero;
+    float lerpSpeed = isDragging ? laneLerpSpeed * 1.5f : laneLerpSpeed;
+    move.x = (targetX - transform.position.x) * lerpSpeed;
+
+    // forward auto-run
+    move.z = currentSpeed;
+
+    // --- REMOVED GRAVITY AND JUMP LOGIC ---
+    // The CharacterController's built-in collision will keep it on the ground.
+    // if (cc.isGrounded && verticalVelocity < 0f) verticalVelocity = -2f;
+    // else verticalVelocity -= gravity * Time.deltaTime;
+    // move.y = verticalVelocity;
+
+    cc.Move(move * Time.deltaTime);
+}
 
     void HandleInput()
     {
@@ -211,17 +212,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!alive) return;
 
-        // Launchpad lompat (kalau ada)
-        var pad = other.GetComponent<Launchpad>();
-        if (pad)
-        {
-            verticalVelocity = pad.force;
-            // Play jump sound
-            if (AudioManager.Instance != null)
-            {
-                AudioManager.Instance.PlaySound("Jump");
-            }
-        }
+        // Launchpad jump removed - now handled individually by LaunchpadTrigger on crowd members
 
         // Speed pad (ACCELERATE)
         var sp = other.GetComponent<SpeedPad>();

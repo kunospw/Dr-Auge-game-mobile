@@ -1953,7 +1953,7 @@ Transform:
   m_GameObject: {fileID: 819332618}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.32962754, y: 0.21567066, z: -32.34667}
+  m_LocalPosition: {x: -0.32962754, y: -0.4100001, z: -32.34667}
   m_LocalScale: {x: 6.6666665, y: 6.6666665, z: 6.6666665}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2278,7 +2278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.0000076, y: 153}
+  m_AnchoredPosition: {x: -2.0000076, y: 228}
   m_SizeDelta: {x: 205.7, y: 123.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1189765049
@@ -3310,7 +3310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: 163.29997}
+  m_AnchoredPosition: {x: -2, y: 238.29997}
   m_SizeDelta: {x: 475.7, y: 131.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1545585709
@@ -3900,7 +3900,7 @@ Transform:
   m_GameObject: {fileID: 1809825104}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.69, z: -3.66}
+  m_LocalPosition: {x: 0, y: -0.85, z: -3.66}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4429,6 +4429,8 @@ MonoBehaviour:
   normalPlatformPrefab: {fileID: 2799707289266394928, guid: b41a0aabc8f22e9478ea35702c6a1b65, type: 3}
   finishChunkPrefab: {fileID: 2896954847166488526, guid: df9f2acee15e4e24bb86afc1e26d3c43, type: 3}
   accelerationChunkPrefab: {fileID: 1238348166261220216, guid: 2ee1d4b75d50769459acac33cbb2d899, type: 3}
+  mutantHordeSpawnerPrefab: {fileID: 9149597061661081111, guid: f84332e7c898c6e49a3f5e98a0a8616b, type: 3}
+  mutantSpawnChance: 0.25
   numberOfObstacleChunks: 7
   numberOfNormalPlatforms: 3
 --- !u!1660057539 &9223372036854775807

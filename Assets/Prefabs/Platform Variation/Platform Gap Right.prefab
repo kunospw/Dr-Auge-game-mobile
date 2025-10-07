@@ -72,7 +72,6 @@ GameObject:
   m_Component:
   - component: {fileID: 256505484558709431}
   - component: {fileID: 894570119284737706}
-  - component: {fileID: 5981006657389676288}
   m_Layer: 0
   m_Name: Fall void
   m_TagString: Untagged
@@ -116,18 +115,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5, y: 1, z: 2.9}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5981006657389676288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3879136206770811111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ecff19ef1ee7b45bccb9ca7cb81ea4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5698828154530532613
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +125,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3460261268864176594}
   - component: {fileID: 984651768536050308}
-  - component: {fileID: 1267945465763011022}
   m_Layer: 0
   m_Name: Gap
   m_TagString: Gap
@@ -182,21 +168,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5, y: 1, z: 2.9}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1267945465763011022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5698828154530532613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 1
-  dps: 5
-  cooldown: 0.2
 --- !u!1 &7743346929013987689
 GameObject:
   m_ObjectHideFlags: 0

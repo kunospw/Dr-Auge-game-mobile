@@ -1,4 +1,4 @@
-// Located in Scripts/CrowdManager.cs
+// Located in: Scripts/CrowdManager.cs
 
 using UnityEngine;
 using System.Collections;
@@ -13,17 +13,17 @@ public class CrowdManager : MonoBehaviour
 
     [Header("Formation")]
     [Tooltip("Number of columns in the crowd formation.")]
-    public int columns = 8;             // Increased for wider, more impressive crowd
+    public int columns = 8;
     [Tooltip("Base horizontal (side-to-side) spacing between members.")]
-    public float baseSpacingX = 0.15f;  // Tighter spacing for more compact look
+    public float baseSpacingX = 0.15f;
     [Tooltip("Base vertical (front-to-back) spacing between members.")]
-    public float baseSpacingZ = 0.2f;   // Tighter front-to-back spacing
+    public float baseSpacingZ = 0.2f;
     
     [Header("Crowd Deformation")]
     [Tooltip("Minimum spacing when crowd is very small (closest together).")]
-    public float minSpacingX = 0.08f;   // Very tight when small
+    public float minSpacingX = 0.08f;
     [Tooltip("Minimum vertical spacing when crowd is very small.")]
-    public float minSpacingZ = 0.12f;   // Very tight front-to-back when small
+    public float minSpacingZ = 0.12f;
     [Tooltip("How quickly the crowd tightens when members are lost (0-1).")]
     [Range(0f, 1f)]
     public float deformationFactor = 0.7f;
@@ -32,13 +32,13 @@ public class CrowdManager : MonoBehaviour
     
     [Header("Dynamic Scaling")]
     [Tooltip("Base scale when crowd is small (1 member).")]
-    public float baseScale = 0.2f;      // Slightly bigger base scale
+    public float baseScale = 0.2f;
     [Tooltip("Minimum scale when crowd is very large.")]
-    public float minScale = 0.04f;      // Minimum scale for very large crowds
+    public float minScale = 0.04f;
     [Tooltip("Number of members at which scaling starts to take effect.")]
-    public int scalingThreshold = 5;    // Start scaling at 5 members
+    public int scalingThreshold = 5;
     [Tooltip("Maximum crowd size for scaling calculation (very large crowd).")]
-    public int maxCrowdSize = 200;      // Allow much larger crowds with optimizations
+    public int maxCrowdSize = 200;
     [Tooltip("How aggressively the scaling reduces size (0-1).")]
     [Range(0f, 1f)]
     public float scalingFactor = 0.8f;
@@ -63,29 +63,22 @@ public class CrowdManager : MonoBehaviour
 
     private readonly List<Transform> crowdMemberTransforms = new List<Transform>();
     
-    // Current dynamic spacing values
     private float currentSpacingX;
     private float currentSpacingZ;
-    
-    // Current dynamic scale value
     private float currentScale;
     
-    // Performance optimization variables
     private int updateIndex = 0;
     private bool useOptimizations = false;
     private Transform playerTransform;
     
-    // Spawn queue for smooth instantiation
     private System.Collections.Generic.Queue<int> spawnQueue = new System.Collections.Generic.Queue<int>();
     private bool isSpawning = false;
     
-    // Object pooling for better performance
     private System.Collections.Generic.Queue<GameObject> crowdPool = new System.Collections.Generic.Queue<GameObject>();
-    private int poolSize = 50; // Pre-create 50 objects
+    private int poolSize = 50;
 
     public int GetCrowdCount()
     {
-        // Keep list in sync with actual children to avoid stale counts
         RepairCrowdListIfNeeded();
         return crowdMemberTransforms.Count;
     }
@@ -97,11 +90,9 @@ public class CrowdManager : MonoBehaviour
 
     private void RepairCrowdListIfNeeded()
     {
-        // Remove nulls
         crowdMemberTransforms.RemoveAll(t => t == null);
         if (crowdContainer == null) return;
 
-        // If list size differs from children, rebuild from children
         if (crowdMemberTransforms.Count != crowdContainer.childCount)
         {
             crowdMemberTransforms.Clear();
@@ -123,10 +114,8 @@ public class CrowdManager : MonoBehaviour
         int afterCount = crowdMemberTransforms.Count;
         if (afterCount != beforeCount) OnCrowdSizeChanged();
         
-        // If we have 0 members after cleanup, trigger game over check
         if (afterCount <= 0 && playerCounter != null)
         {
-            // Don't trigger game over if player is winning
             if (FinishLine.IsWinning)
             {
                 Debug.Log("CrowdManager: Skipping game over check - player is winning!");
@@ -142,24 +131,16 @@ public class CrowdManager : MonoBehaviour
     private void CalculateDynamicSpacing()
     {
         int crowdCount = GetCrowdCount();
-        
-        // If we have fewer members than the threshold, start deforming
         if (crowdCount <= deformationThreshold)
         {
-            // Calculate deformation ratio (0 when at threshold, 1 when at 1 member)
             float deformationRatio = 1f - ((float)crowdCount / deformationThreshold);
             deformationRatio = Mathf.Clamp01(deformationRatio);
-            
-            // Apply deformation factor to control how aggressive the tightening is
             deformationRatio *= deformationFactor;
-            
-            // Interpolate between base spacing and minimum spacing
             currentSpacingX = Mathf.Lerp(baseSpacingX, minSpacingX, deformationRatio);
             currentSpacingZ = Mathf.Lerp(baseSpacingZ, minSpacingZ, deformationRatio);
         }
         else
         {
-            // Use base spacing when above threshold
             currentSpacingX = baseSpacingX;
             currentSpacingZ = baseSpacingZ;
         }
@@ -168,24 +149,15 @@ public class CrowdManager : MonoBehaviour
     private void CalculateDynamicScale()
     {
         int crowdCount = GetCrowdCount();
-        
-        // Always scale based on crowd size, starting from 1 member
         if (crowdCount >= scalingThreshold)
         {
-            // Use simple linear scaling for more predictable results
-            // Scale from baseScale (at 1 member) to minScale (at maxCrowdSize)
             float scaleRatio = (float)(crowdCount - scalingThreshold) / (maxCrowdSize - scalingThreshold);
             scaleRatio = Mathf.Clamp01(scaleRatio);
-            
-            // Apply scaling factor to control how aggressive the scaling is
             scaleRatio *= scalingFactor;
-            
-            // Interpolate between base scale and minimum scale
             currentScale = Mathf.Lerp(baseScale, minScale, scaleRatio);
         }
         else
         {
-            // Use base scale when below threshold
             currentScale = baseScale;
         }
     }
@@ -201,19 +173,15 @@ public class CrowdManager : MonoBehaviour
             crowdContainer.localRotation = Quaternion.identity;
         }
         
-        // Initialize spacing and scale values
         currentSpacingX = baseSpacingX;
         currentSpacingZ = baseSpacingZ;
         currentScale = baseScale;
         
-        // Initialize performance optimization
         playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
         
-        // Reset winning flag when CrowdManager awakens (safety reset)
         FinishLine.IsWinning = false;
         Debug.Log("CrowdManager: Reset IsWinning flag to false in Awake()");
         
-        // Initialize object pool
         InitializePool();
     }
     
@@ -226,47 +194,42 @@ public class CrowdManager : MonoBehaviour
             GameObject pooledCharacter = Instantiate(characterPrefab);
             pooledCharacter.SetActive(false);
             
-            // Set up the character components
-            CrowdMember member = pooledCharacter.GetComponent<CrowdMember>();
-            if (member == null)
-            {
-                member = pooledCharacter.AddComponent<CrowdMember>();
-            }
+            CrowdMember member = pooledCharacter.GetComponent<CrowdMember>() ?? pooledCharacter.AddComponent<CrowdMember>();
             
-            if (pooledCharacter.TryGetComponent<Rigidbody>(out var rb))
-            {
-                rb.isKinematic = true;
-            }
-            if (pooledCharacter.TryGetComponent<Collider>(out var col))
-            {
-                col.isTrigger = true;
-            }
+            if (pooledCharacter.TryGetComponent<Rigidbody>(out var rb)) rb.isKinematic = true;
+            if (pooledCharacter.TryGetComponent<Collider>(out var col)) col.isTrigger = true;
             
             crowdPool.Enqueue(pooledCharacter);
         }
     }
 
+    void Update()
+    {
+        // Debug key to force all crowd members to ground (for testing)
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Debug.Log("Debug: Forcing all crowd members to ground (G key pressed)");
+            ForceAllToGround();
+        }
+        
+        // Debug key to check for stuck members (H key)
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Debug.Log("Debug: Checking for stuck crowd members (H key pressed)");
+            CheckForStuckMembers();
+        }
+    }
+
     void LateUpdate()
     {
-        // Check if we need performance optimizations
         int crowdCount = GetCrowdCount();
         useOptimizations = crowdCount > performanceThreshold;
         
-        // Calculate dynamic spacing and scaling based on current crowd size
         CalculateDynamicSpacing();
         CalculateDynamicScale();
         
-        // Smoothly move the container to follow the main player
-        crowdContainer.position = Vector3.Lerp(
-            crowdContainer.position,
-            transform.position,
-            Time.deltaTime * followSmooth
-        );
-        crowdContainer.rotation = Quaternion.Slerp(
-            crowdContainer.rotation,
-            transform.rotation,
-            Time.deltaTime * followSmooth
-        );
+        crowdContainer.position = Vector3.Lerp(crowdContainer.position, transform.position, Time.deltaTime * followSmooth);
+        crowdContainer.rotation = Quaternion.Slerp(crowdContainer.rotation, transform.rotation, Time.deltaTime * followSmooth);
 
         if (useOptimizations)
         {
@@ -277,49 +240,28 @@ public class CrowdManager : MonoBehaviour
             ArrangeCrowd();
         }
         
-        // Periodic repair to ensure list stays clean
         if (Time.frameCount % 60 == 0) ForceCleanupCrowdList();
     }
 
     public void AddCharacters(int amount)
     {
-        if (!crowdContainer || !characterPrefab)
-        {
-            Debug.LogError("Crowd Container or Character Prefab is not assigned!");
-            return;
-        }
+        if (!crowdContainer || !characterPrefab) return;
+        if (FinishLine.IsWinning) return;
 
-        // Don't spawn new characters if player reached finish line
-        if (FinishLine.IsWinning)
-        {
-            Debug.Log("CrowdManager: Skipping AddCharacters - player reached finish line");
-            return;
-        }
-
-        // For small amounts, spawn immediately
         if (amount <= maxSpawnPerFrame)
         {
             SpawnCharactersImmediate(amount);
         }
         else
         {
-            // For large amounts, queue them for gradual spawning
             spawnQueue.Enqueue(amount);
-            if (!isSpawning)
-            {
-                StartCoroutine(ProcessSpawnQueue());
-            }
+            if (!isSpawning) StartCoroutine(ProcessSpawnQueue());
         }
     }
     
     private void SpawnCharactersImmediate(int amount)
     {
-        for (int i = 0; i < amount; i++)
-        {
-            SpawnSingleCharacter();
-        }
-        
-        // Trigger immediate deformation adjustment when adding characters
+        for (int i = 0; i < amount; i++) SpawnSingleCharacter();
         OnCrowdSizeChanged();
     }
     
@@ -328,52 +270,33 @@ public class CrowdManager : MonoBehaviour
         GameObject newCharacter = GetPooledCharacter();
         if (newCharacter == null)
         {
-            // Pool exhausted, create new one
-            Vector3 spawnPos = transform.position;
-            newCharacter = Instantiate(characterPrefab, spawnPos, Quaternion.identity, crowdContainer);
-            
-            CrowdMember member = newCharacter.GetComponent<CrowdMember>();
-            if (member == null)
-            {
-                member = newCharacter.AddComponent<CrowdMember>();
-            }
-
-            if (newCharacter.TryGetComponent<Rigidbody>(out var rb))
-            {
-                rb.isKinematic = true;
-            }
-            if (newCharacter.TryGetComponent<Collider>(out var col))
-            {
-                col.isTrigger = true;
-            }
+            newCharacter = Instantiate(characterPrefab, transform.position, Quaternion.identity, crowdContainer);
+            CrowdMember member = newCharacter.GetComponent<CrowdMember>() ?? newCharacter.AddComponent<CrowdMember>();
+            if (newCharacter.TryGetComponent<Rigidbody>(out var rb)) rb.isKinematic = true;
+            if (newCharacter.TryGetComponent<Collider>(out var col)) col.isTrigger = true;
         }
         else
         {
-            // Reuse pooled character
             newCharacter.transform.SetParent(crowdContainer);
             newCharacter.transform.position = transform.position;
             newCharacter.transform.rotation = Quaternion.identity;
             newCharacter.SetActive(true);
         }
 
-        // Set initial scale based on current crowd size
         newCharacter.transform.localScale = Vector3.one * currentScale;
         crowdMemberTransforms.Add(newCharacter.transform);
 
-        // Initialize the crowd member
         CrowdMember crowdMember = newCharacter.GetComponent<CrowdMember>();
         if (crowdMember != null)
         {
             crowdMember.Initialize(playerCounter);
+            crowdMember.UpdateGroundReference(transform.position);
         }
     }
     
     private GameObject GetPooledCharacter()
     {
-        if (crowdPool.Count > 0)
-        {
-            return crowdPool.Dequeue();
-        }
+        if (crowdPool.Count > 0) return crowdPool.Dequeue();
         return null;
     }
     
@@ -389,13 +312,11 @@ public class CrowdManager : MonoBehaviour
     
     public void StopSpawning()
     {
-        Debug.Log("CrowdManager: Stopping all spawning operations");
         spawnQueue.Clear();
         isSpawning = false;
-        StopAllCoroutines(); // Stop any running spawn coroutines
+        StopAllCoroutines();
     }
     
-    // Special removal method for finish line that doesn't trigger game over
     public void RemoveCharactersForFinishLine(int amount)
     {
         int amountToRemove = Mathf.Min(amount, crowdMemberTransforms.Count);
@@ -406,21 +327,13 @@ public class CrowdManager : MonoBehaviour
         {
             Transform memberToRemove = crowdMemberTransforms[i];
             crowdMemberTransforms.RemoveAt(i);
-            if (memberToRemove != null)
-            {
-                // Try to return to pool instead of destroying
-                ReturnToPool(memberToRemove.gameObject);
-            }
+            if (memberToRemove != null) ReturnToPool(memberToRemove.gameObject);
         }
         
-        // Clean up any null references that might have been left behind
         crowdMemberTransforms.RemoveAll(transform => transform == null);
         
-        // Only update spacing/scaling, no game over check
         CalculateDynamicSpacing();
         CalculateDynamicScale();
-        
-        Debug.Log($"FinishLine removal: Crowd size now {GetCrowdCount()}. New spacing: X={currentSpacingX:F2}, Z={currentSpacingZ:F2}, Scale: {currentScale:F3}");
     }
     
     private System.Collections.IEnumerator ProcessSpawnQueue()
@@ -429,55 +342,39 @@ public class CrowdManager : MonoBehaviour
         
         while (spawnQueue.Count > 0)
         {
-            // Check if player reached finish line - stop spawning if so
             if (FinishLine.IsWinning)
             {
-                Debug.Log("CrowdManager: Player reached finish line - stopping spawn queue");
-                spawnQueue.Clear(); // Clear remaining spawn requests
+                spawnQueue.Clear();
                 break;
             }
             
             int totalToSpawn = spawnQueue.Dequeue();
             int spawned = 0;
             
-            Debug.Log($"CrowdManager: Starting to spawn {totalToSpawn} characters in batches of {maxSpawnPerFrame}");
-            
             while (spawned < totalToSpawn)
             {
-                // Check finish line state before each batch
                 if (FinishLine.IsWinning)
                 {
-                    Debug.Log("CrowdManager: Player reached finish line during spawning - stopping immediately");
                     isSpawning = false;
                     yield break;
                 }
                 
                 int spawnThisBatch = Mathf.Min(maxSpawnPerFrame, totalToSpawn - spawned);
-                
                 for (int i = 0; i < spawnThisBatch; i++)
                 {
                     SpawnSingleCharacter();
                     spawned++;
                 }
                 
-                // Update spacing and scaling after each batch
                 CalculateDynamicSpacing();
                 CalculateDynamicScale();
                 
-                // Wait before next batch to prevent frame drops
                 yield return new UnityEngine.WaitForSeconds(spawnBatchDelay);
             }
-            
-            Debug.Log($"CrowdManager: Finished spawning {totalToSpawn} characters. Total crowd size: {GetCrowdCount()}");
         }
         
         isSpawning = false;
-        
-        // Final adjustment after all spawning is complete (only if not at finish line)
-        if (!FinishLine.IsWinning)
-        {
-            OnCrowdSizeChanged();
-        }
+        if (!FinishLine.IsWinning) OnCrowdSizeChanged();
     }
 
     public void RemoveCharacters(int amount)
@@ -490,106 +387,80 @@ public class CrowdManager : MonoBehaviour
         {
             Transform memberToRemove = crowdMemberTransforms[i];
             crowdMemberTransforms.RemoveAt(i);
-            if (memberToRemove != null)
-            {
-                // Try to return to pool instead of destroying
-                ReturnToPool(memberToRemove.gameObject);
-            }
+            if (memberToRemove != null) ReturnToPool(memberToRemove.gameObject);
         }
         
-        // Clean up any null references that might have been left behind
         crowdMemberTransforms.RemoveAll(transform => transform == null);
-        
-        // Trigger immediate deformation adjustment (but avoid game over check during finish line)
         OnCrowdSizeChanged();
     }
 
     public void RemoveSpecificCharacter(Transform memberTransform)
     {
-        if (memberTransform == null)
-        {
-            // Silent return
-            return;
-        }
+        if (memberTransform == null) return;
 
         if (crowdMemberTransforms.Contains(memberTransform))
         {
             crowdMemberTransforms.Remove(memberTransform);
-            
-            // Try to return to pool instead of destroying
             ReturnToPool(memberTransform.gameObject);
-            
-            // Trigger immediate deformation adjustment
             OnCrowdSizeChanged();
         }
-        
-        // Clean up any null references that might have been left behind
         crowdMemberTransforms.RemoveAll(transform => transform == null);
     }
     
     private void OnCrowdSizeChanged()
     {
-        // Force immediate recalculation of spacing and scaling for smoother transitions
         CalculateDynamicSpacing();
         CalculateDynamicScale();
         
-        // Optional: Add some debug logging
-        Debug.Log($"Crowd size changed to {GetCrowdCount()}. New spacing: X={currentSpacingX:F2}, Z={currentSpacingZ:F2}, Scale: {currentScale:F3}");
-        
-        // Check for game over if crowd is empty
         if (GetCrowdCount() <= 0 && playerCounter != null)
         {
-            // Don't trigger game over if player is winning
             if (FinishLine.IsWinning)
             {
                 Debug.Log("CrowdManager: Skipping game over check - player is winning!");
             }
             else
             {
-                Debug.Log("Crowd is empty - checking for game over");
                 playerCounter.CheckForGameOver();
             }
         }
     }
 
-    // --- CROWD FORMATION LOGIC WITH DYNAMIC DEFORMATION ---
     private void ArrangeCrowd()
     {
         int count = crowdMemberTransforms.Count;
         if (count <= 0) return;
 
-        // Calculate the actual number of columns needed for current crowd size
         int actualColumns = Mathf.Min(columns, count);
-        
-        // Total width of the formation, used for centering
         float formationWidth = (actualColumns - 1) * currentSpacingX;
 
         for (int i = 0; i < count; i++)
+    {
+        Transform follower = crowdMemberTransforms[i];
+        if (follower == null) continue;
+
+        // ===== ADD THIS CHECK HERE =====
+        // If the member is jumping, skip all positioning logic for it.
+        CrowdMember crowdMember = follower.GetComponent<CrowdMember>();
+        if (crowdMember != null && crowdMember.IsCurrentlyJumping())
         {
-            // Calculate the member's position in the grid
+            continue; // Go to the next crowd member
+        }
+            // ===== END OF FIX =====
+
             int row = i / actualColumns;
             int col = i % actualColumns;
 
-            // Determine the target local position using dynamic spacing
             float xPos = (col * currentSpacingX) - (formationWidth / 2f);
-            float zPos = -row * currentSpacingZ; // Position them behind the leader
+            float zPos = -row * currentSpacingZ;
 
             Vector3 localOffset = new Vector3(xPos, 0, zPos);
-
-            // Convert local offset to world position based on the leader's position and rotation
             Vector3 targetPos = transform.position + (transform.rotation * localOffset);
 
-            // Apply position, rotation, and scale with smoothing
-            Transform follower = crowdMemberTransforms[i];
-            if (follower != null)
-            {
-                follower.position = Vector3.Lerp(follower.position, targetPos, Time.deltaTime * memberSmooth);
-                follower.rotation = Quaternion.Slerp(follower.rotation, transform.rotation, Time.deltaTime * memberSmooth);
-                
-                // Apply dynamic scaling
-                Vector3 targetScale = Vector3.one * currentScale;
-                follower.localScale = Vector3.Lerp(follower.localScale, targetScale, Time.deltaTime * memberSmooth);
-            }
+            follower.position = Vector3.Lerp(follower.position, targetPos, Time.deltaTime * memberSmooth);
+            follower.rotation = Quaternion.Slerp(follower.rotation, transform.rotation, Time.deltaTime * memberSmooth);
+            
+            Vector3 targetScale = Vector3.one * currentScale;
+            follower.localScale = Vector3.Lerp(follower.localScale, targetScale, Time.deltaTime * memberSmooth);
         }
     }
     
@@ -598,13 +469,11 @@ public class CrowdManager : MonoBehaviour
         int count = crowdMemberTransforms.Count;
         if (count <= 0) return;
 
-        // Use simpler formation for very large crowds
         int actualColumns = useSimpleFormation && count > performanceThreshold ? 
             Mathf.Min(columns * 2, count) : Mathf.Min(columns, count);
         
         float formationWidth = (actualColumns - 1) * currentSpacingX;
         
-        // Only update a subset of crowd members per frame
         int membersToUpdate = Mathf.Min(membersPerFrameUpdate, count);
         
         for (int frame = 0; frame < membersToUpdate; frame++)
@@ -616,7 +485,15 @@ public class CrowdManager : MonoBehaviour
             
             if (follower != null)
             {
-                // Cull distant crowd members for performance
+                // ===== ADD THIS CHECK HERE =====
+                CrowdMember crowdMember = follower.GetComponent<CrowdMember>();
+                if (crowdMember != null && crowdMember.IsCurrentlyJumping())
+                {
+                    updateIndex++;
+                    continue; // Skip to the next member in the update batch
+                }
+                // ===== END OF FIX =====
+
                 if (playerTransform != null)
                 {
                     float distanceToPlayer = Vector3.Distance(follower.position, playerTransform.position);
@@ -628,12 +505,10 @@ public class CrowdManager : MonoBehaviour
                     }
                     else
                     {
-                        if (!follower.gameObject.activeInHierarchy)
-                            follower.gameObject.SetActive(true);
+                        if (!follower.gameObject.activeInHierarchy) follower.gameObject.SetActive(true);
                     }
                 }
                 
-                // Calculate position (same as original but with potential simpler formation)
                 int row = i / actualColumns;
                 int col = i % actualColumns;
 
@@ -643,8 +518,7 @@ public class CrowdManager : MonoBehaviour
                 Vector3 localOffset = new Vector3(xPos, 0, zPos);
                 Vector3 targetPos = transform.position + (transform.rotation * localOffset);
 
-                // Use faster lerping for large crowds
-                float optimizedSmooth = memberSmooth * 0.7f; // Slightly less smooth but faster
+                float optimizedSmooth = memberSmooth * 0.7f;
                 
                 follower.position = Vector3.Lerp(follower.position, targetPos, Time.deltaTime * optimizedSmooth);
                 follower.rotation = Quaternion.Slerp(follower.rotation, transform.rotation, Time.deltaTime * optimizedSmooth);
@@ -654,6 +528,59 @@ public class CrowdManager : MonoBehaviour
             }
             
             updateIndex++;
+        }
+    }
+    
+    // Debug method to force all crowd members to ground
+    [System.Obsolete("Debug method - remove in production")]
+    public void ForceAllToGround()
+    {
+        Debug.Log("CrowdManager: Forcing all crowd members to ground");
+        int forcedCount = 0;
+        foreach (Transform memberTransform in crowdMemberTransforms)
+        {
+            if (memberTransform != null)
+            {
+                CrowdMember member = memberTransform.GetComponent<CrowdMember>();
+                if (member != null)
+                {
+                    member.ForceToGround();
+                    forcedCount++;
+                }
+            }
+        }
+        Debug.Log($"CrowdManager: Forced {forcedCount} crowd members to ground");
+    }
+    
+    // Debug method to check for stuck members
+    [System.Obsolete("Debug method - remove in production")]
+    public void CheckForStuckMembers()
+    {
+        int stuckCount = 0;
+        int totalCount = 0;
+        
+        foreach (Transform memberTransform in crowdMemberTransforms)
+        {
+            if (memberTransform != null)
+            {
+                totalCount++;
+                float playerY = transform.position.y;
+                float memberY = memberTransform.position.y;
+                float heightDiff = memberY - playerY;
+                
+                if (heightDiff > 2f) // Consider stuck if more than 2 units above player
+                {
+                    stuckCount++;
+                    Debug.Log($"STUCK MEMBER: {memberTransform.name} at Y={memberY:F2} (player Y={playerY:F2}, diff={heightDiff:F2})");
+                }
+            }
+        }
+        
+        Debug.Log($"CrowdManager: Found {stuckCount} stuck members out of {totalCount} total members");
+        
+        if (stuckCount > 0)
+        {
+            Debug.Log("Press G to force all members to ground, or they should land automatically");
         }
     }
 }

@@ -61,15 +61,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CrowdManager.cs" />
-    <Compile Include="Assets\Scripts\DamageMode.cs" />
-    <Compile Include="Assets\Scripts\FallZone.cs" />
-    <Compile Include="Assets\Scripts\MutantHorde.cs" />
+    <Compile Include="Assets\Scripts\MutantCreature.cs" />
     <Compile Include="Assets\Scripts\FollowZAxis.cs" />
+    <Compile Include="Assets\Scripts\SimpleDamageHandler.cs" />
+    <Compile Include="Assets\Scripts\MutantHordeSpawner.cs" />
     <Compile Include="Assets\Scripts\VolumeScrollbarController.cs" />
+    <Compile Include="Assets\Scripts\DestructibleWall.cs" />
     <Compile Include="Assets\Scripts\SpeedPad.cs" />
     <Compile Include="Assets\Scripts\Chunk.cs" />
     <Compile Include="Assets\Scripts\CrowdMember.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator.cs" />
+    <Compile Include="Assets\Scripts\LaunchpadTrigger.cs" />
     <Compile Include="Assets\Scripts\PlayerCounter.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\GatePairManager.cs" />

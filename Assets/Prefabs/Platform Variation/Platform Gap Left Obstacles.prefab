@@ -101,10 +101,9 @@ GameObject:
   - component: {fileID: 7874425314753617928}
   - component: {fileID: 6982967358445633887}
   - component: {fileID: 1831900694516016562}
-  - component: {fileID: 6914198831673559778}
   m_Layer: 0
   m_Name: Spikes (6)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,21 +196,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.45, y: 2.45, z: 0.2}
   m_Center: {x: 0, y: -0.00000047683716, z: 0}
---- !u!114 &6914198831673559778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2211793297851858142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 1
-  dps: 5
-  cooldown: 0.2
 --- !u!1 &3123931239112771982
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,10 +238,9 @@ GameObject:
   - component: {fileID: 1918680996091532606}
   - component: {fileID: 4148392615377021515}
   - component: {fileID: 8098605832216189166}
-  - component: {fileID: 8347230478695816942}
   m_Layer: 0
   m_Name: Spikes (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -350,21 +333,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.45, y: 2.45, z: 0.2}
   m_Center: {x: 0, y: -0.00000047683716, z: 0}
---- !u!114 &8347230478695816942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3444109852451273162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 1
-  dps: 5
-  cooldown: 0.2
 --- !u!1 &3936166974756982074
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +343,6 @@ GameObject:
   m_Component:
   - component: {fileID: 311419400957023002}
   - component: {fileID: 2610814953053903293}
-  - component: {fileID: 7807338146320617407}
   m_Layer: 0
   m_Name: Fall void
   m_TagString: Untagged
@@ -419,18 +386,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5, y: 1, z: 2.9}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7807338146320617407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3936166974756982074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ecff19ef1ee7b45bccb9ca7cb81ea4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5228688865373397489
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,10 +397,9 @@ GameObject:
   - component: {fileID: 8073435347776350793}
   - component: {fileID: 5608367684312943699}
   - component: {fileID: 6067058063212742441}
-  - component: {fileID: 8979354383591817071}
   m_Layer: 0
   m_Name: Spikes (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -538,21 +492,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.45, y: 2.45, z: 0.2}
   m_Center: {x: 0, y: -0.00000047683716, z: 0}
---- !u!114 &8979354383591817071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5228688865373397489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 1
-  dps: 5
-  cooldown: 0.2
 --- !u!1 &5465608746512646846
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,10 +534,9 @@ GameObject:
   - component: {fileID: 3870122065246990952}
   - component: {fileID: 4052131879583500142}
   - component: {fileID: 1651954145578257316}
-  - component: {fileID: 137062118857486922}
   m_Layer: 0
   m_Name: Spikes (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -691,21 +629,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.45, y: 2.45, z: 0.2}
   m_Center: {x: 0, y: -0.00000047683716, z: 0}
---- !u!114 &137062118857486922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6490605965264695657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 1
-  dps: 5
-  cooldown: 0.2
 --- !u!1 &6550835209090973292
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,10 +640,9 @@ GameObject:
   - component: {fileID: 1922509088129534520}
   - component: {fileID: 8718595947152204799}
   - component: {fileID: 7846968688686009953}
-  - component: {fileID: 2459222603698283521}
   m_Layer: 0
   m_Name: Spikes (5)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -813,21 +735,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.45, y: 2.45, z: 0.2}
   m_Center: {x: 0, y: -0.00000047683716, z: 0}
---- !u!114 &2459222603698283521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6550835209090973292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 1
-  dps: 5
-  cooldown: 0.2
 --- !u!1 &7871148853011089185
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,10 +746,9 @@ GameObject:
   - component: {fileID: 6280486602402015656}
   - component: {fileID: 3084270877276264562}
   - component: {fileID: 3246572983211780651}
-  - component: {fileID: 2277913531789919639}
   m_Layer: 0
   m_Name: Spikes (4)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -935,21 +841,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.45, y: 2.45, z: 0.2}
   m_Center: {x: 0, y: -0.00000047683716, z: 0}
---- !u!114 &2277913531789919639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7871148853011089185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 1
-  dps: 5
-  cooldown: 0.2
 --- !u!1 &9185786094391436239
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +851,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8176694939505591792}
   - component: {fileID: 1558211599395375766}
-  - component: {fileID: 1782509319160717482}
   m_Layer: 0
   m_Name: Gap
   m_TagString: Gap
@@ -977,7 +867,7 @@ Transform:
   m_GameObject: {fileID: 9185786094391436239}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.29, y: 0.17, z: 3.82}
+  m_LocalPosition: {x: -1.29, y: 0.12, z: 3.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1004,21 +894,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5, y: 1, z: 2.9}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1782509319160717482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9185786094391436239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 1
-  dps: 5
-  cooldown: 0.2
 --- !u!1001 &2029530798993882704
 PrefabInstance:
   m_ObjectHideFlags: 0

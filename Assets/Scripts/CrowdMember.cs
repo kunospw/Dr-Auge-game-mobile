@@ -1,81 +1,43 @@
-﻿using UnityEngine;
+﻿// Located in: Scripts/CrowdMember.cs
+
+using UnityEngine;
 
 public class CrowdMember : MonoBehaviour
 {
     private PlayerCounter playerCounter;
     private bool isDead = false;
 
+    public bool IsDead => isDead;
+
+    [Header("Individual Jump Settings")]
+    public float jumpForce = 10f;
+    public float groundCheckDistance = 0.1f;
+    public LayerMask groundLayerMask = 1;
+
+    private float verticalVelocity = 0f;
+    private bool isGrounded = true;
+    private float gravity = -20f;
+    private Vector3 originalPosition;
+    private bool hasOriginalPosition = false;
+    public bool IsFalling { get; private set; } = false;
+
     public void Initialize(PlayerCounter counter)
     {
         playerCounter = counter;
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log($"CROWDMEMBER HIT SOMETHING - Object: {other.name}, Tag: {other.tag}, isDead: {isDead}");
-        
-        if (isDead) return;
-        
-        // If it hits an obstacle hazard (handled by ObstacleDamage), play sound immediately and let it handle
-        if (other.GetComponent<ObstacleDamage>() != null)
-        {
-            Debug.Log($"FOUND OBSTACLEDAMAGE ON {other.name} - PLAYING DAMAGE SOUND AND letting it handle");
-            
-            // Play damage sound immediately since we found an obstacle
-            if (AudioManager.Instance != null)
-            {
-                Debug.Log("★★★ PLAYING DAMAGE SOUND FROM CROWDMEMBER OBSTACLEDAMAGE DETECTION ★★★");
-                AudioManager.Instance.PlayDamageSound();
-            }
-            else
-            {
-                Debug.LogError("★★★ AUDIOMANAGER IS NULL IN CROWDMEMBER OBSTACLEDAMAGE! ★★★");
-            }
-            return;
-        }
+    // ===== ONTRIGGERENTER REMOVED =====
+    // This entire method has been deleted. All collision and damage detection
+    // is now correctly handled by the SimpleDamageHandler.cs script.
+    // This fixes the "ObstacleDamage could not be found" error.
 
-        // Hard hazards by tag
-        if (other.CompareTag("Water") || other.CompareTag("Wall"))
-        {
-            Debug.Log($"CROWDMEMBER HIT WATER/WALL - {other.tag} ({other.name}), PLAYING DAMAGE SOUND");
-            // Play damage sound for water and wall hits
-            if (AudioManager.Instance != null)
-            {
-                AudioManager.Instance.PlayDamageSound();
-            }
-            else
-            {
-                Debug.LogError("AUDIOMANAGER IS NULL IN CROWDMEMBER!");
-            }
-            KillByHazard();
-            if (other.CompareTag("Wall")) other.gameObject.SetActive(false);
-        }
-        else if (other.CompareTag("Gap"))
-        {
-            Debug.Log($"CROWDMEMBER HIT GAP - ({other.name}), PLAYING DAMAGE SOUND");
-            // Play damage sound for falling into gaps
-            if (AudioManager.Instance != null)
-            {
-                AudioManager.Instance.PlayDamageSound();
-            }
-            else
-            {
-                Debug.LogError("AUDIOMANAGER IS NULL IN CROWDMEMBER!");
-            }
-            // Make the crowd member fall instead of instant death
-            MakeFall();
-        }
-        else
-        {
-            Debug.Log($"CROWDMEMBER HIT SOMETHING ELSE - Tag: {other.tag}, Name: {other.name}");
-        }
-    }
-
-    private void MakeFall()
+    public void MakeFall()
     {
         if (isDead) return;
-        
-        // Enable physics so the member falls
+
+        IsFalling = true;
+        isDead = true;
+
         var rb = GetComponent<Rigidbody>();
         if (rb == null)
         {
@@ -83,31 +45,96 @@ public class CrowdMember : MonoBehaviour
         }
         rb.isKinematic = false;
         rb.useGravity = true;
-        
-        // Remove from crowd formation immediately
+
         if (playerCounter != null)
         {
             playerCounter.RemoveSpecificMember(transform);
         }
-        
-        // Destroy after falling for a bit (to clean up)
-        Destroy(gameObject, 3f);
-        isDead = true;
+
+        Destroy(gameObject, 2f); // Set to 2 seconds as requested
     }
 
     public void KillByHazard()
     {
         if (isDead) return;
-
         isDead = true;
 
-        // Remove from counter BEFORE destroying the object
         if (playerCounter != null)
         {
             playerCounter.RemoveSpecificMember(transform);
         }
 
-        // Use Destroy instead of DestroyImmediate to avoid physics trigger errors
         Destroy(gameObject);
+    }
+
+    void Start()
+    {
+        originalPosition = transform.position;
+        hasOriginalPosition = true;
+    }
+
+    void Update()
+    {
+        if (isDead) return;
+        HandleJumpPhysics();
+    }
+
+    private void HandleJumpPhysics()
+    {
+        if (!hasOriginalPosition) return;
+
+        float currentY = transform.position.y;
+        float groundY = originalPosition.y;
+
+        if (currentY <= groundY + 0.01f && verticalVelocity <= 0)
+        {
+            Vector3 pos = transform.position;
+            pos.y = groundY;
+            transform.position = pos;
+            verticalVelocity = 0f;
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+            verticalVelocity += gravity * Time.deltaTime;
+            transform.position += new Vector3(0, verticalVelocity * Time.deltaTime, 0);
+        }
+    }
+
+    public void Jump(float force)
+    {
+        if (isDead || !isGrounded) return;
+
+        verticalVelocity = force;
+        isGrounded = false;
+
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySound("Jump");
+        }
+    }
+
+    public void UpdateGroundReference(Vector3 newGroundPosition)
+    {
+        originalPosition = newGroundPosition;
+        hasOriginalPosition = true;
+    }
+
+    public void ForceToGround()
+    {
+        if (hasOriginalPosition)
+        {
+            Vector3 pos = transform.position;
+            pos.y = originalPosition.y;
+            transform.position = pos;
+            verticalVelocity = 0f;
+            isGrounded = true;
+        }
+    }
+
+    public bool IsCurrentlyJumping()
+    {
+        return !isGrounded;
     }
 }

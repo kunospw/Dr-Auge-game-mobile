@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7897520301847588338}
   - component: {fileID: 4225281800095100979}
   - component: {fileID: 155571989062610540}
-  - component: {fileID: 2618662688975331775}
   - component: {fileID: 1910044910073302245}
   m_Layer: 0
   m_Name: Rotating saw (6)
@@ -100,22 +99,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 0, z: 180}
---- !u!114 &2618662688975331775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55044251000470626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  damage: 1
-  dps: 2
-  cooldown: 0.1
 --- !u!135 &1910044910073302245
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -148,7 +131,6 @@ GameObject:
   - component: {fileID: 3702749544776947551}
   - component: {fileID: 74814373489213769}
   - component: {fileID: 2185507322184582766}
-  - component: {fileID: 1837079584320310225}
   - component: {fileID: 7512189124587906088}
   m_Layer: 0
   m_Name: Rotating saw (7)
@@ -237,22 +219,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 0, z: 180}
---- !u!114 &1837079584320310225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096726455062716972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  damage: 1
-  dps: 2
-  cooldown: 0.1
 --- !u!135 &7512189124587906088
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -341,7 +307,6 @@ GameObject:
   - component: {fileID: 1448223829448362231}
   - component: {fileID: 4970949404382792914}
   - component: {fileID: 4077949602840391515}
-  - component: {fileID: 9051787527885936083}
   - component: {fileID: 308279560379422833}
   m_Layer: 0
   m_Name: Rotating saw (2)
@@ -430,22 +395,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 0, z: 180}
---- !u!114 &9051787527885936083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3676429191369924929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  damage: 1
-  dps: 2
-  cooldown: 0.1
 --- !u!135 &308279560379422833
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -540,7 +489,6 @@ GameObject:
   - component: {fileID: 1910615129856174304}
   - component: {fileID: 520220340193506823}
   - component: {fileID: 2512936002108917289}
-  - component: {fileID: 4506959119019702726}
   - component: {fileID: 7807550988267462123}
   m_Layer: 0
   m_Name: Rotating saw (3)
@@ -629,22 +577,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 0, z: 180}
---- !u!114 &4506959119019702726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6698495297012933856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  damage: 1
-  dps: 2
-  cooldown: 0.1
 --- !u!135 &7807550988267462123
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -677,7 +609,6 @@ GameObject:
   - component: {fileID: 4653877034162985756}
   - component: {fileID: 3187480148807473000}
   - component: {fileID: 4726844251523679769}
-  - component: {fileID: 6376996254512675606}
   - component: {fileID: 7009466756174727497}
   m_Layer: 0
   m_Name: Rotating saw (5)
@@ -766,22 +697,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 0, z: 180}
---- !u!114 &6376996254512675606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7300905819158380462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  damage: 1
-  dps: 2
-  cooldown: 0.1
 --- !u!135 &7009466756174727497
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -814,7 +729,6 @@ GameObject:
   - component: {fileID: 72657597374471096}
   - component: {fileID: 366218058099795090}
   - component: {fileID: 4557809347352144888}
-  - component: {fileID: 4485456348862404636}
   - component: {fileID: 6782240991148649314}
   m_Layer: 0
   m_Name: Rotating saw (4)
@@ -903,22 +817,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 0, z: 180}
---- !u!114 &4485456348862404636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8492447384738758039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  damage: 1
-  dps: 2
-  cooldown: 0.1
 --- !u!135 &6782240991148649314
 SphereCollider:
   m_ObjectHideFlags: 0

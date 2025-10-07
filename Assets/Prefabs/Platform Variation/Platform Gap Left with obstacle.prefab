@@ -41,11 +41,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4679514400309336929}
   - component: {fileID: 8558094450835934930}
-  - component: {fileID: 4024768692792800826}
   - component: {fileID: 9080088099776340961}
   m_Layer: 0
   m_Name: Rabbit Cactus (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,24 +116,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4024768692792800826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3040617626467483171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
-  destroyOnHit: 1
-  destroyDelay: 0
-  hitsToDestroy: 0
 --- !u!136 &9080088099776340961
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -168,11 +149,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1400293083369477522}
   - component: {fileID: 6272160623171853739}
-  - component: {fileID: 1651592157782315426}
   - component: {fileID: 369439069327266917}
   m_Layer: 0
   m_Name: Rabbit Cactus (4)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,24 +224,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1651592157782315426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3252644102429961244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
-  destroyOnHit: 1
-  destroyDelay: 0
-  hitsToDestroy: 0
 --- !u!136 &369439069327266917
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -295,11 +257,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1566365647862448148}
   - component: {fileID: 117594539127027323}
-  - component: {fileID: 528878064606744499}
   - component: {fileID: 8577318876907361638}
   m_Layer: 0
   m_Name: Rabbit Cactus
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -371,24 +332,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &528878064606744499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4069163190729913375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
-  destroyOnHit: 1
-  destroyDelay: 0
-  hitsToDestroy: 0
 --- !u!136 &8577318876907361638
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -422,7 +365,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6014675966655943184}
   - component: {fileID: 4774816097645669085}
-  - component: {fileID: 5173383375552339454}
   m_Layer: 0
   m_Name: Gap
   m_TagString: Gap
@@ -439,7 +381,7 @@ Transform:
   m_GameObject: {fileID: 4146293452080254433}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.29, y: 0.17, z: 3.81}
+  m_LocalPosition: {x: -1.29, y: 0.12000005, z: 3.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -466,24 +408,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5, y: 1, z: 2.9}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5173383375552339454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4146293452080254433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 1
-  dps: 5
-  cooldown: 0.2
-  destroyOnHit: 0
-  destroyDelay: 0
-  hitsToDestroy: 0
 --- !u!1 &6417049394798943362
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,11 +418,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4888685682131339878}
   - component: {fileID: 5458937955004942995}
-  - component: {fileID: 5739124484711964474}
   - component: {fileID: 2797952073289501662}
   m_Layer: 0
   m_Name: Rabbit Cactus (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -570,24 +493,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5739124484711964474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6417049394798943362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
-  destroyOnHit: 1
-  destroyDelay: 0
-  hitsToDestroy: 0
 --- !u!136 &2797952073289501662
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -621,7 +526,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9104827285138709291}
   - component: {fileID: 4970029900639577352}
-  - component: {fileID: 1585857795982781419}
   m_Layer: 0
   m_Name: Fall void
   m_TagString: Untagged
@@ -665,18 +569,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5, y: 1, z: 2.9}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1585857795982781419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676561025634959443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ecff19ef1ee7b45bccb9ca7cb81ea4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6917870858666641508
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,11 +699,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2618248317114716231}
   - component: {fileID: 7900623328558764949}
-  - component: {fileID: 7703183714629396084}
   - component: {fileID: 1392814884202629416}
   m_Layer: 0
   m_Name: Rabbit Cactus (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -883,24 +774,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7703183714629396084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8835952306222459565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  dps: 5
-  cooldown: 0.2
-  destroyOnHit: 1
-  destroyDelay: 0
-  hitsToDestroy: 0
 --- !u!136 &1392814884202629416
 CapsuleCollider:
   m_ObjectHideFlags: 0

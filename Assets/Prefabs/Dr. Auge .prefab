@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 2653680118294898693}
   - component: {fileID: 8277523001383102045}
   - component: {fileID: 5424258171841210876}
+  - component: {fileID: 2703068016421015202}
+  - component: {fileID: 9190575555059315708}
+  - component: {fileID: 4202277026450577171}
   m_Layer: 0
   m_Name: 'Dr. Auge '
   m_TagString: Untagged
@@ -136,3 +139,45 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2703068016421015202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3494126475720813140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53da7ed30af87df41bd8c22d468d74f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 10
+  groundCheckDistance: 0.1
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+--- !u!114 &9190575555059315708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3494126475720813140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324032d2b99cd364eba16bfba3524ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 50
+--- !u!114 &4202277026450577171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3494126475720813140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21075384e7f0d5242997bb84fdb66c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

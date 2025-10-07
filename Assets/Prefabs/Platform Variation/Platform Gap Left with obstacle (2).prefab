@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4511494211839201611}
   - component: {fileID: 3578493771363219551}
-  - component: {fileID: 5129357875401134120}
   m_Layer: 0
   m_Name: Fall void
   m_TagString: Untagged
@@ -85,18 +84,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5, y: 1, z: 2.9}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5129357875401134120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550318358851192805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ecff19ef1ee7b45bccb9ca7cb81ea4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1281758431047084846
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +125,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2173606316343935696}
   - component: {fileID: 4463239674595402912}
-  - component: {fileID: 8669016279052511995}
   m_Layer: 0
   m_Name: Gap
   m_TagString: Gap
@@ -182,21 +168,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5, y: 1, z: 2.9}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8669016279052511995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5915504986856705517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75382f8245519254da1ed8fcd7339c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 1
-  dps: 5
-  cooldown: 0.2
 --- !u!1 &7895415722802907014
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +203,6 @@ Transform:
   - {fileID: 3165123748948206563}
   - {fileID: 8632683934203063772}
   - {fileID: 9048798450538054556}
-  - {fileID: 8781044096145988814}
   - {fileID: 3490627947410035436}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -353,72 +323,6 @@ MeshCollider:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 27545bc4bdcb6e243b205614f2b47208, type: 3}
   m_PrefabInstance: {fileID: 3199383376230908936}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5658531470623626095
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 5114347723293680523}
-    m_Modifications:
-    - target: {fileID: 3943493773234334858, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.023
-      objectReference: {fileID: 0}
-    - target: {fileID: 3988972594386784161, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3988972594386784161, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 3988972594386784161, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3988972594386784161, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3988972594386784161, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3988972594386784161, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3988972594386784161, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3988972594386784161, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3988972594386784161, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3988972594386784161, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681502041050289302, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-      propertyPath: m_Name
-      value: MutantHorde_Obstacle
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6247c865ca9216747bfddd599411c430, type: 3}
---- !u!4 &8781044096145988814 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3988972594386784161, guid: 6247c865ca9216747bfddd599411c430, type: 3}
-  m_PrefabInstance: {fileID: 5658531470623626095}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7031029042698908767
 PrefabInstance:

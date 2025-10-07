@@ -4,19 +4,22 @@ ScriptsOnlyBuild:
     - AudioManager
     - Chunk
     - CrowdManager
-    - FallZone
+    - CrowdMember
+    - DestructibleWall
     - FinishLine
     - FollowZAxis
     - Gate
     - GateAutoProofing
     - GatePairManager
     - Launchpad
+    - LaunchpadTrigger
     - LevelGenerator
-    - MutantHorde
-    - ObstacleDamage
+    - MutantCreature
+    - MutantHordeSpawner
     - PlayerController
     - PlayerCounter
     - RotateObject
+    - SimpleDamageHandler
     - SpeedPad
     - UIManager
     Cinemachine.dll:
@@ -42,8 +45,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -179,35 +184,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18350}
     - Class: 114
-      Script: {instanceID: 18816}
+      Script: {instanceID: 18624}
     - Class: 114
-      Script: {instanceID: 19404}
+      Script: {instanceID: 18818}
     - Class: 114
-      Script: {instanceID: 19562}
+      Script: {instanceID: 18914}
     - Class: 114
-      Script: {instanceID: 19684}
+      Script: {instanceID: 19408}
     - Class: 114
-      Script: {instanceID: 19846}
+      Script: {instanceID: 19566}
     - Class: 114
-      Script: {instanceID: 20036}
+      Script: {instanceID: 19688}
     - Class: 114
-      Script: {instanceID: 20084}
+      Script: {instanceID: 19850}
     - Class: 114
-      Script: {instanceID: 20120}
+      Script: {instanceID: 20040}
     - Class: 114
-      Script: {instanceID: 20128}
+      Script: {instanceID: 20088}
     - Class: 114
-      Script: {instanceID: 20460}
+      Script: {instanceID: 20124}
     - Class: 114
-      Script: {instanceID: 20692}
+      Script: {instanceID: 20462}
     - Class: 114
-      Script: {instanceID: 21024}
+      Script: {instanceID: 20694}
     - Class: 114
-      Script: {instanceID: 21058}
+      Script: {instanceID: 21026}
     - Class: 114
-      Script: {instanceID: 21244}
+      Script: {instanceID: 21060}
     - Class: 114
-      Script: {instanceID: 21294}
+      Script: {instanceID: 21076}
+    - Class: 114
+      Script: {instanceID: 21246}
     - Class: 114
       Script: {instanceID: 21422}
     - Class: 114
@@ -229,7 +236,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 23422}
     - Class: 114
-      Script: {instanceID: 23450}
+      Script: {instanceID: 36070}
+    - Class: 114
+      Script: {instanceID: 40060}
+    - Class: 114
+      Script: {instanceID: 40068}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -629,6 +640,12 @@ ScriptsOnlyBuild:
     className: UnityOnSelectMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 85d2cadce8c41ac418da4d78d86e48f0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SimpleDamageHandler
+  - hash:
+      serializedVersion: 2
       Hash: 5b8b7230ad968399f6726aa1269dcdcb
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -669,6 +686,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionExit2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: b8222a911319103c3c80ae9c30910a67
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LaunchpadTrigger
   - hash:
       serializedVersion: 2
       Hash: 0a3f328f3ea906bbbcf794f4c27ee59d
@@ -893,12 +916,6 @@ ScriptsOnlyBuild:
     className: CinemachineBlendListCamera
   - hash:
       serializedVersion: 2
-      Hash: c86f3aa5924ef055da8f7b8fdcbc5a20
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ObstacleDamage
-  - hash:
-      serializedVersion: 2
       Hash: f2098fcd8ee983a05ec192f63904298f
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1067,7 +1084,7 @@ ScriptsOnlyBuild:
     className: CinemachineConfiner
   - hash:
       serializedVersion: 2
-      Hash: 4a3882002987da073229cdd5d9346a11
+      Hash: 663bcae98c3e1abbc5a162359c9fb410
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CrowdMember
@@ -1107,12 +1124,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextMeshProUGUI
-  - hash:
-      serializedVersion: 2
-      Hash: f9fdc094e030b9a723d0d124a5fb78d0
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: FallZone
   - hash:
       serializedVersion: 2
       Hash: 1ffac23275503bdd790860176ff9a3c1
@@ -1469,12 +1480,6 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 9067f5fee8e02f5ecbc1a69bfe937f63
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MutantHorde
-  - hash:
-      serializedVersion: 2
       Hash: 00eef92bf387da2c9009267123d9d674
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1485,7 +1490,25 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 8d6db236f2fe3d040c0e111bd612affe
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DestructibleWall
+  - hash:
+      serializedVersion: 2
+      Hash: 2d0a945bfe88999803c062de382a2fdd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MutantCreature
+  - hash:
+      serializedVersion: 2
+      Hash: b0e1cfa6992b8ff7550cb93f6b337e37
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MutantHordeSpawner
   platform: 13
   scenePathNames:
   - Assets/Scenes/Chunks Generation.unity
-  playerPath: D:/Freelance/Dr.Auge/Dr.Auge.apk
+  playerPath: D:/Freelance/Dr.Auge/Dr.Auge-final.apk
