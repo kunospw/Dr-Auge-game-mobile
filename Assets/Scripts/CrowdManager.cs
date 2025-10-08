@@ -205,13 +205,6 @@ public class CrowdManager : MonoBehaviour
 
     void Update()
     {
-        // Debug key to force all crowd members to ground (for testing)
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Debug.Log("Debug: Forcing all crowd members to ground (G key pressed)");
-            ForceAllToGround();
-        }
-        
         // Debug key to check for stuck members (H key)
         if (Input.GetKeyDown(KeyCode.H))
         {
@@ -290,7 +283,6 @@ public class CrowdManager : MonoBehaviour
         if (crowdMember != null)
         {
             crowdMember.Initialize(playerCounter);
-            crowdMember.UpdateGroundReference(transform.position);
         }
     }
     
@@ -397,16 +389,25 @@ public class CrowdManager : MonoBehaviour
     public void RemoveSpecificCharacter(Transform memberTransform)
     {
         if (memberTransform == null) return;
-
         if (crowdMemberTransforms.Contains(memberTransform))
         {
             crowdMemberTransforms.Remove(memberTransform);
-            ReturnToPool(memberTransform.gameObject);
+
+            CrowdMember member = memberTransform.GetComponent<CrowdMember>();
+            if (member != null && member.IsFalling)
+            {
+                // If falling, let it fall independently instead of pooling.
+                memberTransform.SetParent(null);
+            }
+            else
+            {
+                // For all other deaths, return to the pool.
+                ReturnToPool(memberTransform.gameObject);
+            }
             OnCrowdSizeChanged();
         }
-        crowdMemberTransforms.RemoveAll(transform => transform == null);
     }
-    
+
     private void OnCrowdSizeChanged()
     {
         CalculateDynamicSpacing();
@@ -438,13 +439,13 @@ public class CrowdManager : MonoBehaviour
         Transform follower = crowdMemberTransforms[i];
         if (follower == null) continue;
 
-        // ===== ADD THIS CHECK HERE =====
-        // If the member is jumping, skip all positioning logic for it.
-        CrowdMember crowdMember = follower.GetComponent<CrowdMember>();
-        if (crowdMember != null && crowdMember.IsCurrentlyJumping())
-        {
-            continue; // Go to the next crowd member
-        }
+            // ===== ADD THIS CHECK HERE =====
+            // If the member is jumping, skip all positioning logic for it.
+            CrowdMember crowdMember = follower.GetComponent<CrowdMember>();
+            if (crowdMember != null && (crowdMember.IsCurrentlyJumping() || crowdMember.IsFalling))
+            {
+                continue; // Skip positioning logic for jumping members
+            }
             // ===== END OF FIX =====
 
             int row = i / actualColumns;
@@ -487,7 +488,7 @@ public class CrowdManager : MonoBehaviour
             {
                 // ===== ADD THIS CHECK HERE =====
                 CrowdMember crowdMember = follower.GetComponent<CrowdMember>();
-                if (crowdMember != null && crowdMember.IsCurrentlyJumping())
+                if (crowdMember != null && (crowdMember.IsCurrentlyJumping() || crowdMember.IsFalling))
                 {
                     updateIndex++;
                     continue; // Skip to the next member in the update batch
@@ -530,28 +531,7 @@ public class CrowdManager : MonoBehaviour
             updateIndex++;
         }
     }
-    
-    // Debug method to force all crowd members to ground
-    [System.Obsolete("Debug method - remove in production")]
-    public void ForceAllToGround()
-    {
-        Debug.Log("CrowdManager: Forcing all crowd members to ground");
-        int forcedCount = 0;
-        foreach (Transform memberTransform in crowdMemberTransforms)
-        {
-            if (memberTransform != null)
-            {
-                CrowdMember member = memberTransform.GetComponent<CrowdMember>();
-                if (member != null)
-                {
-                    member.ForceToGround();
-                    forcedCount++;
-                }
-            }
-        }
-        Debug.Log($"CrowdManager: Forced {forcedCount} crowd members to ground");
-    }
-    
+        
     // Debug method to check for stuck members
     [System.Obsolete("Debug method - remove in production")]
     public void CheckForStuckMembers()
