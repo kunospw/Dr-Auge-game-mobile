@@ -143,8 +143,32 @@ public class UIManager : MonoBehaviour
         FinishLine.IsWinning = false;
         Debug.Log("UIManager: Reset IsWinning flag to false for restart");
         
+        // Reset time scale before reloading
         Time.timeScale = 1f;
+        
+        // Stop current audio before restarting
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StopSound("Gameplay");
+            Debug.Log("UIManager: RestartGame - stopped gameplay music");
+        }
+        
+        // Use coroutine to restart with proper audio timing
+        StartCoroutine(RestartWithAudio());
+    }
+    
+    private System.Collections.IEnumerator RestartWithAudio()
+    {
+        // Wait a frame to ensure audio stops properly
+        yield return null;
+        
+        Debug.Log("UIManager: Starting scene reload...");
+        
+        // Reload the scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+        // Note: AudioManager.Start() will automatically play "Main Menu" music
+        // since playMusicOnStart is true and it calls PlayBackgroundMusic("Main Menu")
     }
 
     public void TogglePause()

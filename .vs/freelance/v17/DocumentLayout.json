@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Unity Project\\freelance\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|d:\\unity project\\freelance\\assets\\scripts\\crowdmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crowdmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\crowdmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crowdmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|d:\\unity project\\freelance\\assets\\scripts\\crowdmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crowdmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|D:\\Unity Project\\freelance\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,24 +67,24 @@
       "RelativeMoniker": "D:0:0:{9844796F-6E4B-FAF3-CE4C-0EF9E758AAA0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Project\\freelance\\assets\\scripts\\crowdmemberdamagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\crowdmemberdamagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Project\\freelance\\Assets\\Scripts\\CrowdMemberDamageController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CrowdMemberDamageController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Project\\freelance\\assets\\scripts\\hazarddamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\hazarddamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Project\\freelance\\Assets\\Scripts\\HazardDamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\HazardDamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Project\\freelance\\assets\\scripts\\fallzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\fallzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Project\\freelance\\Assets\\Scripts\\FallZone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FallZone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Project\\freelance\\assets\\scripts\\damagemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\damagemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Project\\freelance\\Assets\\Scripts\\DamageMode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\DamageMode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Project\\freelance\\assets\\scripts\\mutanthorde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\mutanthorde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Project\\freelance\\Assets\\Scripts\\MutantHorde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MutantHorde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -170,15 +170,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CrowdMember.cs",
               "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\CrowdMember.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CrowdMember.cs",
               "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\CrowdMember.cs",
               "RelativeToolTip": "Assets\\Scripts\\CrowdMember.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAEwDQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAADwvzMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T06:58:15.662Z"
+              "WhenOpened": "2025-09-22T06:58:15.662Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -218,13 +219,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CrowdManager.cs",
               "DocumentMoniker": "D:\\Unity Project\\freelance\\Assets\\Scripts\\CrowdManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CrowdManager.cs",
               "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\CrowdManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\CrowdManager.cs",
-              "ViewState": "AgIAAIwBAAAAAAAAAAAAAJUBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-15T11:33:50.547Z",
               "EditorCaption": ""
@@ -333,9 +334,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "D:\\Unity Project\\freelance\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAMcAAAAAAAAAAAAvwNoAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAYwGQAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T07:20:56.083Z"
+              "WhenOpened": "2025-09-13T07:20:56.083Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

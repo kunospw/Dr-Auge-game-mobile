@@ -56,10 +56,20 @@ public class AudioManager : MonoBehaviour
     
     void Start()
     {
+        Debug.Log("AudioManager: Start() called, playMusicOnStart = " + playMusicOnStart);
         if (playMusicOnStart)
         {
-            PlayBackgroundMusic("Main Menu");
+            Debug.Log("AudioManager: Starting coroutine to play Main Menu music");
+            StartCoroutine(PlayMainMenuMusicDelayed());
         }
+    }
+    
+    private System.Collections.IEnumerator PlayMainMenuMusicDelayed()
+    {
+        // Wait a frame to ensure everything is initialized
+        yield return null;
+        Debug.Log("AudioManager: Now playing Main Menu music after delay");
+        PlayBackgroundMusic("Main Menu");
     }
     
     void SetupAudio()

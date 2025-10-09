@@ -24,14 +24,20 @@ public class SimpleDamageHandler : MonoBehaviour
         // Check the TAG of the object we hit.
         string tag = other.tag;
 
-        if (tag == "Gap")
+        if (tag == "Gap" || tag == "Water")
         {
-            // If we hit a Gap, start the falling sequence.
+            // If we hit a Gap or Water, start the falling sequence (same behavior)
+            Debug.Log($"★★★★★ {name} hit {tag} - FALLING WITH PHYSICS ★★★★★");
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayDamageSound();
+            }
             crowdMember.MakeFall();
         }
-        else if (tag == "Obstacle" || tag == "Wall" || tag == "Water")
+        else if (tag == "Obstacle" || tag == "Wall")
         {
-            // If we hit any other hazard, kill the character instantly.
+            // If we hit obstacles or walls, kill the character instantly.
+            Debug.Log($"★★★★★ {name} hit {tag} - INSTANT KILL ★★★★★");
             if (AudioManager.Instance != null)
             {
                 AudioManager.Instance.PlayDamageSound();
